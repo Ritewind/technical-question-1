@@ -1,0 +1,40 @@
+Basic concepts to understand
+NFTs: Non Fungible Tokens, let's imagine them much like the products category we have on amazon. 
+
+Example, Washing Machines: There are 1,000s of different unique washing machines on amazon, each with a different price.
+
+This is similare to how NFT projects work, there are 1000s of NFTs in a project.
+Each NFT is unique, owned by different individuals.
+
+Just like sellers can list their Washing machines for any price on amazon, owners of NFTs can do the same.
+If I have an NFT, i can choose to list it for any price.
+
+If someone finds it a good deal, they can buy.
+
+Due to this nature, prices of NFTs under a project are constantly changing by users.
+
+Our customers are people who are interested in buying these NFTs / Washing Machines. We have to help them find the best deal in realtime.
+
+
+======================
+Now to the first challenge
+=====================
+
+We have an object hosted at:  https://s3objectlambda-test.s3.us-east-1.amazonaws.com/warm/0xd0e9faf06ff4cc3948295b665ccff764ec696f47
+This object contains listings of a project upto certain time. Our goal is to fetch listings that happened after that and merge it with the response from above URL.
+
+Variables
+-contract_address : This is a unique identifier for each project
+-token_ids : IDs to identify each washing machine. This is unique for every NFT.
+-listing_times : EPOCH time when each listing happened.
+-expiration_times : expire time of the listing (after this it'll be invalid)
+-prices : price of the listing
+-from_addresses - Ignore this
+-last_trade_events ignore this 
+-synced_at: time when this object was last updated
+
+
+
+Goals:
+We have to identify listings that happened after the previous object was last updated (syned_at) using "fb_contract_address_listings.json.json"
+Merge it into the abover object and save / log the result.
