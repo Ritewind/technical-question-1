@@ -20,7 +20,7 @@ Our customers are people who are interested in buying these NFTs / Washing Machi
 Now to the first challenge
 =====================
 
-We have an object hosted at:  https://s3objectlambda-test.s3.us-east-1.amazonaws.com/warm/0xd0e9faf06ff4cc3948295b665ccff764ec696f47
+Read object: "last_listing_update.json"
 This object contains listings of a project upto certain time. Our goal is to fetch listings that happened after that and merge it with the response from above URL.
 
 Variables
