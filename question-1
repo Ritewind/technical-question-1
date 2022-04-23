@@ -39,4 +39,6 @@ Goals:
 1. We have to identify listings that happened after the previous object was last updated (syned_at) using "fb_contract_address_listings.json.json"
 Merge it into the abover object and save / log the result.
 
-2. Each token can have multiple listing in the JSON file, we have to find the cheapest listing by price and add it.
+2. Each token can have multiple listing in the "fb_contract_address_listings.json.json", we have to find the cheapest listing by price and add it.
+
+3. Find the most optimal way to achieve the above goals (miminal looping thouh objects / arrays)
